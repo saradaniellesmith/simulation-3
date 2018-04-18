@@ -5,6 +5,8 @@ import './NewSong.css';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
+import { editSong } from '../../ducks/mainReducer';
+
 class NewSong extends Component {
     constructor() {
         super();
@@ -13,6 +15,7 @@ class NewSong extends Component {
     render() {
         return(
            <div> 
+               
                <h1> Add a new song </h1> 
                <section className="video"> 
                    <video width="320" height="240" autoPlay > 

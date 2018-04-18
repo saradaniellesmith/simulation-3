@@ -1,17 +1,22 @@
 import axios from 'axios';
 
+
 const EDIT_SONG = "EDIT_SONG";
+
 
 const initialState = {
     song: []
 }
 
-export function editSong() {
+
+export function editSong(song, artist, album) {
     return {
         type: EDIT_SONG,
         payload: axios
           .put("/song", {
-
+              song: song,
+              artist: artist, 
+              album: album 
           })
           .then(res => {
               return res.data;
@@ -25,7 +30,6 @@ export default function reducer(state = initialState, action) {
     switch (action.type) {
 
 
-     
       case `${EDIT_SONG}_PENDING`:
         return Object.assign({}, state, { isLoading: true });
   
