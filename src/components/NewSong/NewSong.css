@@ -1,0 +1,23 @@
+.new-song {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-right: 300px;
+}
+
+.video {
+    float: left;
+    margin-left: 200px;
+}
+
+div > input {
+    padding: 10px;
+    display: flex;
+    justify-content: column;
+
+}
+
+div + h1 {
+   color: blue;
+}
+
