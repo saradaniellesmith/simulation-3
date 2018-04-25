@@ -8,7 +8,10 @@ const massive = require('massive');
 const port = process.env.PORT || 3003;
 const { SESSION_SECRET, CONNECTION_STRING } = process.env;
 
-const controller = require("./controller/controller");
+const mainCtrl = require("./controller/mainCtrl");
+
+//use if building for production 
+// app.use(express.static(`${__dirname}/../build`));
 
 const app = express();
 
@@ -34,7 +37,7 @@ app.use(
     })
 );
 
-app.put("/song", controller.controller);
+app.get("/songs", mainCtrl.getSongs );
 
 app.listen(port, () => {
     console.log(`Port listening on ${port}`);

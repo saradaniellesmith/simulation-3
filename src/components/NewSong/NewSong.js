@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 import './NewSong.css';
 
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-
-import { editSong } from '../../ducks/mainReducer';
 
 class NewSong extends Component {
     constructor() {
@@ -21,6 +18,9 @@ class NewSong extends Component {
                    <video width="320" height="240" autoPlay > 
                        <source src={require('./708213662 copy.mp4')} type="video/mp4" /> 
                    </video>
+
+                   <a href="https://www.w3schools.com"> Visit me </a>
+                   
                </section> 
                 
                <section className="add-new-song">
